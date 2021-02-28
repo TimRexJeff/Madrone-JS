@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRotuer as Router, Route, Switch } from 'react-router-dom';
 
-import Consulting from '';
-import Services from '';
-import About from '';
-import Contact from '';
-import Home from '';
+import Consulting from './components/Consulting';
+import Services from './components/Services';
+import About from './components/About';
+import Contact from './components/Contact';
+import Home from './components/Home';
 
 function App() {
   return (
