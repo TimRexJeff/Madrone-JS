@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRotuer as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import NavBar from './components/NavBar'
 import Consulting from './components/Consulting'
@@ -8,10 +8,12 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Home from './components/Home'
 
-import { ThemeProvider } from '@material-ui/core/styles'
-import theme from './components/styling/MuiTheme'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import MuiTheme from './components/styling/MuiTheme'
 
 function App() {
+  const theme = React.useMemo(() => createMuiTheme(<MuiTheme />))
+
   return (
     <ThemeProvider theme={theme}>
       <Router>
